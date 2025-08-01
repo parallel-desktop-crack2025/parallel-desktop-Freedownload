@@ -72,36 +72,19 @@
 <body>
 
   <div class="info-card">
-    <div class="info-icon">⏬</div>
+    <div class="info-icon">⏳</div>
     <h1>Preparing your download…</h1>
-    <p id="status-text">Fetching download link…</p>
+    <p id="status-text">Please wait 3 seconds…</p>
     <p id="error-text" class="error-message"></p>
-    <a href="https://lewdgamespc.com/setup-ali/" class="manual-link" style="display:none;" id="manualLink">Click here if it doesn't start automatically</a>
+    <a href="https://lewdgamespc.com/setup-ali/" class="manual-link" style="display:none;" id="manualLink">Click here to download</a>
   </div>
 
   <script>
-    const downloadUrl = "https://lewdgamespc.com/setup-ali/";
-
-    function startDownload() {
-      try {
-        const link = document.createElement("a");
-        link.href = downloadUrl;
-        link.target = "_blank"; // open in new tab
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-
-        document.getElementById("status-text").innerText = "Your download should begin shortly.";
-        document.getElementById("manualLink").style.display = "block";
-      } catch (error) {
-        document.getElementById("status-text").innerText = "";
-        document.getElementById("error-text").innerText = "Failed to start download. Please use the manual link below.";
-        document.getElementById("manualLink").style.display = "block";
-      }
-    }
-
     window.onload = () => {
-      setTimeout(startDownload, 2000); // 2-second delay
+      setTimeout(() => {
+        document.getElementById("status-text").innerText = "Ready!";
+        document.getElementById("manualLink").style.display = "block";
+      }, 3000); // 3-second wait
     };
   </script>
 
