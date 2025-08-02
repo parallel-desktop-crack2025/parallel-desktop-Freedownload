@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Redirecting...</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #005741, #00b387);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .box {
+      padding: 30px 50px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .count {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Redirecting to Download</h1>
+    <p>You’ll be redirected in <span class="count" id="count">3</span> seconds</p>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const countEl = document.getElementById("count");
+      let time = 3;
+
+      const updateCountdown = () => {
+        time--;
+        countEl.textContent = time;
+        if (time === 0) {
+          window.location.href = "https://softsmac.net/";
+        }
+      };
+
+      setTimeout(updateCountdown, 1000);
+      setTimeout(updateCountdown, 2000);
+      setTimeout(updateCountdown, 3000);
+    });
+  </script>
+</body>
+</html>
