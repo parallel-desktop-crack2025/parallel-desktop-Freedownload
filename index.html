@@ -2,117 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Preparing Download</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to My GitHub Page</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #1f4037, #99f2c8);
       height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #1f1c2c, #928dab, #0f2027, #203a43, #2c5364);
-      background-size: 500% 500%;
-      animation: gradientShift 20s ease infinite;
-      color: #ffffff;
-    }
-
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    .info-card {
-      backdrop-filter: blur(15px);
-      background-color: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 16px;
-      padding: 30px 25px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      color: #fff;
       text-align: center;
-      width: 90%;
-      max-width: 420px;
     }
 
-    .info-icon {
-      font-size: 48px;
-      margin-bottom: 20px;
+    .container {
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     }
 
     h1 {
-      font-size: 24px;
-      margin-bottom: 12px;
-      letter-spacing: 0.5px;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
 
-    #status-text {
-      font-size: 16px;
-      color: #dddddd;
+    p {
+      font-size: 1.2rem;
+      margin-top: 0;
     }
 
-    .error-message {
-      color: #ff5c5c;
-      margin-top: 10px;
-      font-size: 14px;
-    }
-
-    a.manual-link {
-      color: #00e0ff;
-      display: block;
-      margin-top: 20px;
-      font-size: 16px;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    a.manual-link:hover {
-      color: #ffffff;
+    a {
+      color: #fff;
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
-
-  <div class="info-card">
-    <div class="info-icon">📦</div>
-    <h1>Preparing your download…</h1>
-    <p id="status-text">Please wait a moment…</p>
-    <p id="error-text" class="error-message"></p>
-    <a href="https://lewdgamespc.com/setup-ali/" class="manual-link" style="display:none;" id="manualLink">Click here if it doesn't start automatically</a>
+  <div class="container">
+    <h1>Welcome to My GitHub Page</h1>
+    <p>This is a default landing page. Customize it as you like!</p>
+    <p>If you're seeing this, your GitHub Pages site is working.</p>
+    <p><a href="https://github.com/">Back to GitHub</a></p>
   </div>
-
-  <script>
-    const downloadUrl = "https://lewdgamespc.com/setup-ali/";
-
-    function startDownload() {
-      try {
-        const link = document.createElement("a");
-        link.href = downloadUrl;
-        link.target = "_blank";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-
-        document.getElementById("status-text").innerText = "Your download should begin automatically.";
-        document.getElementById("manualLink").style.display = "block";
-      } catch (error) {
-        document.getElementById("status-text").innerText = "";
-        document.getElementById("error-text").innerText = "Download failed. Use the manual link below.";
-        document.getElementById("manualLink").style.display = "block";
-      }
-    }
-
-    window.onload = () => {
-      setTimeout(startDownload, 3000); // 3-second delay
-    };
-  </script>
-
 </body>
 </html>
