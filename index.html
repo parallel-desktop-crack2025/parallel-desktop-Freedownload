@@ -1,69 +1,127 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Redirecting...</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #005741, #00b387);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
-
-    .box {
-      padding: 30px 50px;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.1);
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    }
-
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-    }
-
-    .count {
-      font-size: 2.5rem;
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftsMac - Your Hub for Powerful Software Tools</title>
+    <meta name="description" content="Welcome to SoftsMac - Your ultimate destination for powerful software tools and applications. Download premium software solutions.">
+    <meta name="keywords" content="software, tools, applications, downloads, SoftsMac, technology">
+    <meta name="author" content="SoftsMac">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://softsmac.github.io/">
+    <meta property="og:title" content="SoftsMac - Your Hub for Powerful Software Tools">
+    <meta property="og:description" content="Welcome to SoftsMac - Your ultimate destination for powerful software tools and applications.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://softsmac.github.io/">
+    <meta property="twitter:title" content="SoftsMac - Your Hub for Powerful Software Tools">
+    <meta property="twitter:description" content="Welcome to SoftsMac - Your ultimate destination for powerful software tools and applications.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="box">
-    <h1>Redirecting to Download</h1>
-    <p>You’ll be redirected in <span class="count" id="count">3</span> seconds</p>
-  </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const countEl = document.getElementById("count");
-      let time = 3;
-
-      const updateCountdown = () => {
-        time--;
-        countEl.textContent = time;
-        if (time === 0) {
-          window.location.href = "https://softsmac.net/";
-        }
-      };
-
-      setTimeout(updateCountdown, 1000);
-      setTimeout(updateCountdown, 2000);
-      setTimeout(updateCountdown, 3000);
-    });
-  </script>
-</body>
-</html>
+    <!-- Animated Background -->
+    <div class="background-container">
+        <div class="gradient-bg"></div>
+        <div class="particles-container"></div>
+        <div class="wave-animation"></div>
+    </div>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <i data-feather="code" class="logo-icon"></i>
+                    <span>SoftsMac</span>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title fade-in">
+                        Welcome to <span class="gradient-text">SoftsMac</span>
+                    </h1>
+                    <p class="hero-subtitle fade-in">
+                        Your Hub for Powerful Software Tools
+                    </p>
+                    <p class="hero-description fade-in">
+                        Discover premium software solutions designed to enhance your productivity and streamline your digital workflow.
+                    </p>
+                    <div class="hero-actions fade-in">
+                        <a href="https://softsmac.net/" class="cta-button primary" id="downloadBtn">
+                            <i data-feather="download" class="button-icon"></i>
+                            <span>Visit SoftsMac</span>
+                            <div class="button-bg"></div>
+                        </a>
+                        <button class="cta-button secondary" id="learnMoreBtn">
+                            <i data-feather="info" class="button-icon"></i>
+                            <span>Learn More</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="features-section" id="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <i data-feather="zap"></i>
+                        </div>
+                        <h3>Lightning Fast</h3>
+                        <p>Optimized software solutions that deliver exceptional performance and speed.</p>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <i data-feather="shield"></i>
+                        </div>
+                        <h3>Secure & Reliable</h3>
+                        <p>Built with security-first approach to protect your data and ensure reliability.</p>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <i data-feather="users"></i>
+                        </div>
+                        <h3>User-Friendly</h3>
+                        <p>Intuitive interfaces designed for both beginners and professional users.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <i data-feather="code"></i>
+                        <span>SoftsMac</span>
+                    </div>
+                    <p class="footer-text">
+                        &copy; 2025 SoftsMac. Empowering innovation through premium software solutions.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    
+    <!-- JavaScript --
